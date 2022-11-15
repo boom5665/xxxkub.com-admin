@@ -1,0 +1,55 @@
+{
+    "header": {
+        "en": "English",
+        "th": "thai",
+        "cn": "Chinese",
+        "logout": "登出",
+        "version": "手机版"
+    },
+    "account": " 帐户",
+    "profile": "个人的",
+    "announcement": " 宣布",
+    "message": "信息",
+    "member_setting": "会员设置",
+    "member_setting_mobile": "会员设置 (移动的)",
+    "change_passcode": "Change Passcode",
+
+    "Member Management": "会员管理",
+    "Create Shareholder": "创建股东",
+
+    "list_Sharehoder": "股东名单",
+    "present_pt": "现在的 PT",
+
+    "username": "用户名",
+    "change_password": "更改密码",
+    "Change Passcode": "更改密码",
+
+    "password_now": "当前密码",
+    "password_new": "新密码",
+    "password_confirm": "确认密码",
+    "warn_password_now": "输入当前密码",
+    "warn_password_new": "输入新密码",
+    "warn_password_confirm": "输入确认密码",
+    "cancel": "取消",
+
+    "enter_passcode_now": "输入当前密码",
+    "enter_passcode_new": "输入新密码",
+    "enter_passcode_confirm": "输入确认密码",
+
+    "balance": "平衡",
+    "downline_outstanding": "下线优秀",
+    "bet": "赌注",
+    "bets_total": "投注总额",
+
+    "member_management": "会员管理",
+    "create_shareholder": "创建股东",
+    "shareholder_list": "股东名单",
+    "setting_present_pt": "现在的 PT",
+
+    "Test_1": "Test 1",
+    "Test": "Test",
+    "subtitle": "subtitle",
+    "title": "title",
+    "Typemovie":"Typemovie",
+    "": ""
+}

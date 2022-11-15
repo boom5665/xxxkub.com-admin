@@ -1,0 +1,171 @@
+.LoginPage {
+    background-color: $primary-color1;
+
+    height: 98vh;
+    .headerLogin {
+        display: flex;
+        height: 84px;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 3px solid $primary-color8;
+        position: fixed;
+        width: 100vw;
+        z-index: 3;
+    }
+    .bodyLogin {
+        position: fixed;
+        display: flex;
+        flex-flow: column;
+        vertical-align: middle;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        top: 84px;
+        transition: 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), z-index 1ms;
+        width: 100%;
+
+        .loginContainer {
+            width: 400px;
+            max-height: 90%;
+            // overflow-y: auto;
+            box-shadow: 0px 3px 12px 2px rgb(20 20 20 / 22%);
+            transform-origin: center center;
+            .loginHeader {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                box-shadow: 0 3px 12px 2px #14141438;
+                border-radius: 10px 10px 0 0;
+                padding: 20px 24px;
+                background: $primary-color1;
+                flex-direction: column;
+                padding: 20px;
+                align-items: center;
+                z-index: 3;
+                .textTitle {
+                    font-size: 20px;
+                    color: #fff;
+                    margin-bottom: 16px;
+                }
+                img {
+                    max-height: 80px;
+                    width: 100%;
+                    max-width: 180px;
+                    margin-bottom: 20px;
+                    margin-top: 40px;
+                }
+            }
+            .loginBody {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                border-radius: 0 0 10px 10px;
+                padding: 20px 24px;
+                background: $primary-color2;
+                box-shadow: 0 3px 12px 2px #14141438;
+            }
+        }
+    }
+}
+.error-box {
+    background: #ffdcdc;
+    width: 100%;
+    min-height: 52px;
+
+    border-radius: 5px;
+    margin-bottom: 36px;
+    font-size: 14px;
+    line-height: 20px;
+    color: red;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fromLogin {
+    width: 350px;
+
+    .labelLogin {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 5px !important;
+    }
+    .input-group {
+        margin-bottom: 20px;
+        width: 350px;
+        position: relative;
+        flex-wrap: wrap;
+        align-items: stretch;
+        display: flex;
+
+        .LoginInput {
+            width: 100%;
+            height: 32px;
+            background: #ffffff;
+            border: 1px solid #c1c1c1;
+            border-radius: 5px;
+            font-size: 16px;
+            &:focus {
+                box-shadow: 0 0 0 2px #bfbfbf;
+            }
+            &:focus-visible {
+                outline: none !important;
+            }
+        }
+        .icon {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            cursor: pointer;
+        }
+        .icon-eye {
+            color: $primary-color1;
+        }
+        .labelinvalid {
+            color: red;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: -18px;
+            left: 0;
+        }
+        .inputinvalid {
+            border-color: red;
+            &:focus {
+                box-shadow: 0 0 0 2px red;
+            }
+        }
+    }
+    .signin-btn {
+        background: $primary-color1;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        &:hover{
+             background:$primary-color8;
+        }
+    }
+
+    .contact {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        line-height: 16px;
+        color: #6b6b6b;
+        text-align: center;
+    }
+}

@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box !important;
+  font-family: "pentor" !important;
+}
+
+/* width */
+
+.modal {
+  display: flex;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 4;
+  /* Sit on top */
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+@import "./_variable.scss";
+@import "./pentorFont.css";
+
+@import "./_breadcrumb.scss";
+@import "./_CreateShareholder.scss";
+@import "./_v-tabs.scss";
+@import "./_v-table.scss";
+@import "./_profile.scss";
+@import "./_header.scss";
+@import "./_navbar.scss";
+@import "./_passcode.scss";
+@import "./_login.scss";
+@import "./_loading.scss";
+@import "_input_button.scss";
+@import "_page_ads.scss";
+@import "_page_Category.scss";
+@import "_page_Football.scss";
+@import "_page_Movie.scss";
+@import "_page_SettingwebPage.scss";
+@import "_page_Report.scss";
+@import "_page_Col.scss";
+@import "_page_Account.scss";
+@import "_page_Document.scss";
+@import "_component_switch.scss";
+button{
+  border: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #aaa;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary-color8;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-color1;
+}
+
+html {
+  font-family: "pentor" !important;
+  // font-weight: 300;
+  min-width: 1440px;
+}
+
+body {
+  font-family: "pentor" !important;
+  margin: 0;
+  background-color: #dee0ea;
+  // overflow: hidden; /* Hide scrollbars */
+}
+
+a:-webkit-any-link {
+  // color: unset;
+  // cursor: pointer;
+  text-decoration: unset;
+}
+
+// a:-webkit-any-link:active {
+//   color: unset;
+// }
+
+// a:-webkit-any-link:hover {
+//   opacity: 0.7;
+// }
+
+.marginNav {
+  transition: 0.3s;
+  margin-left: 256px;
+  width: calc(100vw - 256px);
+
+  &.miniNav {
+    width: calc(100vw - 85px);
+    margin-left: 85px;
+  }
+}
+
+.container-scoll {
+  height: calc(100vh - 158px);
+  overflow: auto;
+  // overflow-y: hidden;
+  // overflow-x:auto;
+  margin-top: 158px;
+
+  .container-main {
+    min-width: 1440px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    // overflow: auto;
+    z-index: 3;
+  }
+}
+
+
+.content-body {
+  background-color: #ffffff;
+  width: 98%;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 8px #1414142e;
+  border-radius: 5px;
+  // display: flex;
+  // flex-direction: row;
+}
+
+.btn_radio_checkbox {
+  display: flex;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.time-group {
+  margin-left: 0;
+}
+
+.input-label {
+  display: flex;
+  margin-top: 15px !important;
+  font-size: 15px !important;
+  line-height: 16px !important;
+  color: #141414 !important;
+}
+
+.type-buttonss {
+  background: $primary-color2;
+  padding: 9px 12px;
+  color: $primary-color1;
+  margin: 0 2px;
+  border: none;
+}
+
+.type-buttonss:hover {
+  background: $primary-color4;
+  color: $primary-color1;
+}
+
+.type_active {
+  background: $primary-color1 !important;
+  color: $secondary-color2 !important;
+}
+
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.icon_loader {
+  display: inline-block;
+  border: 3px solid $primary-color1;
+  border-radius: 50%;
+  border-top: 3px solid $secondary-color2;
+  width: 10px;
+  height: 10px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

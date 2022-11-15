@@ -1,0 +1,147 @@
+$primary-color1: #22876e;
+$primary-color8: #33a589;
+$primary-color6: #66bca6;
+$primary-color4: #b3ddd3;
+$primary-color2: #e6f4f0;
+$primary-red: #eb0606;
+
+
+$BTNYellow: #Fde60C;
+$BTNYellow-hover: #FFEE4F;
+
+$add1:#008f6b;
+$add2:#1976d2;
+
+$edit:#25d5e8;
+
+$secondary-color1: #fde50d;
+$secondary-color8: #feee5e;
+$secondary-color6: #fef287;
+$secondary-color4: #fef6b0;
+$secondary-color2: #fffce7;
+
+$back-color1: #000;
+$back-color2: #14141490;
+$back-color3: rgba(0, 0, 0, 0.08);
+
+$tap-color1: #ccc;
+$tap-color2: #fff;
+
+$setting1: rgb(234, 209, 220);
+$setting2:#000000;
+$setting3:#b3ddd3;
+$setting4:rgb(217, 234, 211);
+$setting5:rgb(207, 226, 243);
+
+
+
+$report1: #4caf50;
+$cate1:#2196f3;
+
+.primary-color1 {
+  color: $primary-color1 !important;
+}
+
+.primary-color8 {
+  color: $primary-color8 !important;
+}
+
+.primary-color6 {
+  color: $primary-color6 !important;
+}
+
+.primary-color4 {
+  color: $primary-color4 !important;
+}
+
+.primary-color2 {
+  color: $primary-color2 !important;
+}
+
+.secondary-color1 {
+  color: $secondary-color1 !important;
+}
+
+.secondary-color8 {
+  color: $secondary-color8 !important;
+}
+
+.secondary-color6 {
+  color: $secondary-color6 !important;
+}
+
+.secondary-color4 {
+  color: $secondary-color4 !important;
+}
+
+.secondary-color2 {
+  color: $secondary-color2 !important;
+}
+
+.back-color1 {
+  color: $back-color1 !important;
+}
+
+.back-color2 {
+  color: $back-color2 !important;
+}
+
+.back-color2 {
+  color: $back-color3 !important;
+}
+
+
+// bg-color
+
+.bg-primary-color1 {
+  color: $primary-color1 !important;
+}
+
+.bg-primary-color8 {
+  background-color: $primary-color8 !important;
+
+}
+
+.bg-primary-color6 {
+  background-color: $primary-color6 !important;
+}
+
+.bg-primary-color4 {
+  background-color: $primary-color4 !important;
+}
+
+.bg-primary-color2 {
+  background-color: $primary-color2 !important;
+}
+
+.bg-secondary-color1 {
+  background-color: $secondary-color1 !important;
+}
+
+.bg-secondary-color8 {
+  background-color: $secondary-color8 !important;
+}
+
+.bg-secondary-color6 {
+  background-color: $secondary-color6 !important;
+}
+
+.bg-secondary-color4 {
+  background-color: $secondary-color4 !important;
+}
+
+.bg-secondary-color2 {
+  background-color: $secondary-color2 !important;
+}
+
+.bg-back-color1 {
+  background-color: $back-color1 !important;
+}
+
+.bg-back-color2 {
+  background-color: $back-color2 !important;
+}
+
+.bg-back-color3 {
+  background-color: $back-color3 !important;
+}

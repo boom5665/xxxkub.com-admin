@@ -1,0 +1,22 @@
+.v-tab {
+    color: $back-color2 !important;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+    &:hover {
+        background-color: $secondary-color2 !important;
+    }
+    &:before {
+        background-color: unset !important;
+    }
+}
+.v-tabs-active-class {
+    color: $primary-color1 !important;
+}.v-slide-group__content{
+    height: 34px;
+}
+.test{color:red}
+.test1{color:blue}
+.test2{color:green}
+.test3{color:yellow}
+.test4{color:brown}
+.test5{color:black}

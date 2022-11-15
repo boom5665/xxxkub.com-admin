@@ -1,0 +1,270 @@
+.container-header {
+    background-color: $primary-color1;
+    display: flex;
+    max-height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+
+    .header-left {
+        display: flex;
+        min-width: 256px;
+        align-items: center;
+        margin-left: 16px;
+    }
+
+    .header-right {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .right-header-left {
+            margin: 0 20px;
+            height: 70px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+
+            .line-border {
+                margin-left: 20px;
+            }
+        }
+
+        .right-header-right {
+            position: relative;
+            margin-right: 16px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+
+            .btn-secondary {
+                line-height: 24px;
+                height: 36px;
+                padding: 10px 12px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: $primary-color1;
+                border-radius: 5px;
+                border: none;
+                color: #fff;
+
+                &:hover {
+                    cursor: pointer;
+                    background: $primary-color8;
+                }
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+            .mg-btn {
+                margin-right: 20px;
+
+                * {
+                    pointer-events: none;
+                }
+            }
+
+            .short-line-border {
+                border-left: 1px solid #ededed;
+                height: 20px;
+                margin: 0 20px;
+            }
+        }
+    }
+
+    .line-border {
+        // margin-left: 20px;
+        // border-left: 1px solid #c1c1c155;
+        height: 70px;
+    }
+
+    .btn-header {
+        height: 36px;
+        padding: 10px 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-color1;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-family: "pentor";
+        font-size: 14px;
+
+        &:hover {
+            cursor: pointer;
+            background: $primary-color8;
+        }
+    }
+
+    .img-money {
+        font-size: 17px;
+        // padding: 0 8px;
+    }
+
+    .img-arrow {
+        font-size: 17px;
+        margin-left: 8px;
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .dropdown-menu {
+        min-width: 7.5rem;
+    }
+
+    svg {
+        margin-right: 5px;
+        width: 24px;
+    }
+}
+
+.btn-header-currency {
+    height: 36px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-color1;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-family: "pentor";
+    font-size: 14px;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+        background: $primary-color8;
+    }
+
+    .img-money {
+        font-size: 16px;
+        height: 20px !important;
+        margin-right: 8px;
+    }
+
+    &:hover {
+        .w-currency {
+            display: block;
+        }
+    }
+
+    .w-currency {
+        display: none;
+        line-height: 17px;
+        position: absolute;
+        top: 52px;
+        left: 38px;
+        width: 150px;
+        background-color: $secondary-color8;
+        font-size: 12px;
+        font-weight: 500;
+        color: #000000;
+        border-radius: 5px;
+        padding: 10px;
+
+        .bg-currency {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+}
+
+.component-lang {
+    position: relative;
+
+    .btn-language {
+        height: 36px;
+        padding: 10px 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-color1;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-family: "pentor";
+        font-size: 14px;
+
+        &:hover {
+            cursor: pointer;
+            background: $primary-color8;
+        }
+
+        .w-selected {
+            display: flex;
+            align-items: center;
+            width: 110px;
+            font-size: 14px;
+            justify-content: space-between;
+            pointer-events: none;
+
+            .left {
+                display: flex;
+                align-items: center;
+
+                img {
+                    padding-right: 8px;
+                }
+            }
+        }
+    }
+
+    .frame-lang {
+        position: absolute;
+        background-color: #fff;
+        color: #7e8890;
+        border-radius: 0.1875rem;
+        width: 145px;
+        top: 45px;
+        left: -6px;
+        height: 85px;
+        z-index: 999;
+        border: 1px #ddd solid;
+
+        .border-box {
+            display: flex;
+            // border-bottom: 1px #ddd solid;
+            padding: 3px 0;
+            font-size: 14px;
+            align-items: center;
+            color: #000000;
+            height: 36px;
+            text-decoration: unset;
+
+            &:hover {
+                background-color: $secondary-color2;
+            }
+        }
+
+        .bd-box-active {
+            background-color: $primary-color2;
+        }
+    }
+
+    .slide-fade-enter-active,
+    .slide-fade-leave-active {
+        transition: all 0.5s ease;
+        // height: 65px;
+        overflow: hidden;
+    }
+
+    .slide-fade-enter,
+    .slide-fade-leave-to {
+        height: 0;
+        opacity: 0;
+    }
+}

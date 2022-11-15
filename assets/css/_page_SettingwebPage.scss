@@ -1,0 +1,137 @@
+.pageZone-body-page {
+  width: 100%;
+  height: 70px;
+  background-color: $setting1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: $setting2;
+  position: relative;
+  margin-top: 1px;
+}
+
+.pageZone-footer-page {
+  width: 100%;
+  height: 80px;
+  background-color: $setting4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: $setting2;
+  position: relative;
+  margin-top: 5px;
+}
+
+.pagelistZone-body-poster-page {
+  position: relative;
+  width: 100%;
+  background-color: $setting5;
+  height: 100px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: $setting2;
+}
+
+.pagelistZone-body-content-page {
+  position: relative;
+  width: 100%;
+  background-color: $setting1;
+  height: 70px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: $setting2;
+}
+
+.pageZone-header-page {
+  height: 80px;
+  background-color: $setting4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: $setting2;
+}
+
+.cate-arrow {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  background: #b3ddd3;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+  font-size: 15px;
+  padding: 5px 0px;
+  &:hover{
+    background: #c2e0d9;
+  }
+  &.dis-cate{
+    background: #86aba3;
+    &:hover{
+      background: #86aba3;
+    }
+  }
+}
+
+.padding-r {
+  padding-right: 20px;
+
+}
+
+.padding-l {
+  padding-left: 20px;
+}
+
+.margin-r {
+  margin-right: 100px;
+}
+
+.border-cate {
+  border: 1px solid black;
+  margin-right: 5px;
+  border-radius: 5px;
+  padding: 5px !important;
+}
+
+.nopadding {
+  padding: 0px !important;
+}
+.nopadding-bottom {
+  padding: 0px 12px !important;
+}
+.margin-left-h{
+  margin-left: 11px;
+}
+.display-column{display: flex;
+    flex-direction: column;}
+.secretkey{
+  margin-top: 5px;
+  color: #a0a0a0;
+}
+
+.over-scoll{
+  overflow-y: scroll;
+  width: 100%;
+  height: 350px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+.Zone-position{
+  overflow-y: scroll;
+  height: 690px;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+}

@@ -1,0 +1,28 @@
+/*! Cryptocoins - cryptocurrency icon font | https://github.com/allienworks/cryptocoins */
+
+@font-face {
+  font-family: 'pentor';
+  src: local('pentor'), url('../fonts/pentorcorporate-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'pentor';
+  src: local('pentor'), url('../fonts/pentorcorporate-bold.woff') format('woff');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'pentor';
+  src: local('pentor'), url('../fonts/pentorcorporate-extrabold.woff') format('woff');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'pentor';
+  src: local('pentor'), url('../fonts/pentorcorporate-light.woff') format('woff');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'pentor';
+  src: local('pentor'), url('../fonts/pentorcorporate-semibold.woff') format('woff');
+  font-weight: 500;
+}
+

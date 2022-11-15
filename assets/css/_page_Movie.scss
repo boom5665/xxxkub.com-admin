@@ -1,0 +1,66 @@
+.selectGroup {
+  border: solid 1px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  max-height: 400px;
+  overflow: auto;
+
+  .selectOption {
+    padding: 10px 0px;
+    border-bottom: 1px solid #00000055;
+    cursor: pointer;
+
+    &:hover {
+      background: $primary-color2;
+      transform: scale(1.02);
+      transition: 0.3s;
+    }
+  }
+
+}
+
+.dis-center {
+  justify-content: center;
+}
+
+
+
+.columallPoster {
+  .addbody {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+
+    border-bottom: 1px solid #00000020;
+  }
+
+  .columid {
+    width: 5%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .columtext {
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .columAct {
+    text-align: center;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+}
