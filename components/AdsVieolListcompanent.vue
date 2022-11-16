@@ -53,6 +53,10 @@
                             <input type="file" ref="fileupload" accept="video/mp4,video/webm" :id="'imageInput' + val.id" @change="previewImage($event, i)" />
                             <label :for="'imageInput' + val.id" class="imagebutton">{{ $t("Select Video") }}</label>
                             <div class="input-label-bottom" style="text-align: left">{{ $t(Video_text_bottom) }}</div>
+                            <div class="input-error" v-if="videostatus == false">
+                                <font-awesome-icon :icon="['fa', icon_error]"></font-awesome-icon>
+                                Please complete the information.
+                            </div>
                         </div>
                     </div>
                     <div class="display-start" style="margin-bottom: 10px">
@@ -77,16 +81,23 @@ export default {
     props: ["val", "i"],
     data() {
         return {
+            icon_error: "exclamation",
+
+            // URL โฆษณา
             adsurl_text_top: "Ads URL",
             adsurlstatus: true,
             adsurl_text_bottom: "example: https://www.google.com/",
 
+            // ชื่อโฆษณา
             adsname_text_top: "Video Ads Name",
             adsnamestatus: true,
 
+            // วิดีโอ
             Video_text_top: "Ads Video",
             Video_text_bottom: "File Type is MP4 Only",
+            videostatus: true,
 
+            // เวลาข้าม
             adsskip_text_top: "Skip Time",
             adsskipstatus: true,
             status_text_top: "Video status",
@@ -104,12 +115,12 @@ export default {
                 const file = event.target.files[0];
                 const blobURL = URL.createObjectURL(file);
 
-                self.val.video = input.files[0].type;
+                self.val.video = input.files[0];
                 onload = (e) => {
                     self.val.previewKey = input.files[0];
                 };
                 self.val.previewKey = blobURL;
-                if (self.val.video == "video/mp4" || self.val.video == "video/webm") {
+                if (self.val.video.type == "video/mp4" || self.val.video.type == "video/webm") {
                     self.previewStatus = true;
                     self.val.video = input.files[0];
                 } else {
@@ -128,14 +139,21 @@ export default {
                                     '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
                                     '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
 
-            if (video == "" || name.trim()== "" || url.trim() == "" || regex.test(url) == false || skip == 0) {
+            if (
+                ( typeof video != 'string' && video.type != "video/mp4" && video.type != "video/webm" ) 
+                || name.trim()== "" 
+                || url.trim() == "" 
+                || regex.test(url) == false 
+                || skip == 0
+            ) {
+                console.log(video);
                 this.error(id, name, url, skip, status, video);
             } else {
                 this.FormData(id, name, url, skip, status, video);
             }
         },
         error(id, name, url, skip, status, video) {
-            if (video == null) {
+            if (video != null && ( video.type != "video/mp4" && video.type != "video/webm" ) ) {
                 this.videostatus = false;
             } else {
                 this.videostatus = true;
@@ -164,7 +182,13 @@ export default {
             } else {
                 this.adsskipstatus = true;
             }
-            if (video == null || url.trim() == "" || regex.test(url) == false || name.trim() == "" || skip == "") {
+            if (
+                ( video != null && (video.type != "video/mp4" && video.type != "video/webm") ) ||
+                url.trim() == "" || 
+                regex.test(url) == false || 
+                name.trim() == "" || 
+                skip == ""
+            ) {
                 this.$swal({
                     icon: "warning",
                     title: "Please complete the information.",

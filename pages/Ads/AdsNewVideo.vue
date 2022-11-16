@@ -83,7 +83,8 @@ export default {
             }
         },
         adsvideo(val) {
-            if (val.trim() != "") {
+            let type = this.video.type;
+            if (val.trim() != "" || type == "video/mp4" || type == "video/webm") {
                 this.adsvideostatus = true;
             }
         },
@@ -108,21 +109,32 @@ export default {
                                     '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
                                     '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
                                     '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-
+            
+            let type = "";
+            if(this.video != null){
+                type = this.video.type;
+            }
             if (
                 this.video == null || 
+                ( type != "video/mp4" && 
+                type != "video/webm" ) ||
                 this.adsname.trim() == "" || 
                 this.adsurl.trim() == "" ||
                 this.adsskip == 0 ||
                 regex.test(this.adsurl) == false
-                ) {
+            ) {
                 this.error();
             } else {
                 this.FormData();
             }
         },
         error() {
-            if (this.video == null) {
+            let type = "";
+            if(this.video != null){
+                type = this.video.type;
+            }
+            
+            if (this.video == null || (type != "video/mp4" && type != "video/webm") ) {
                 this.videostatus = false;
             } else {
                 this.videostatus = true;
@@ -151,7 +163,14 @@ export default {
             } else {
                 this.adsskipstatus = true;
             }
-            if (this.video == null || this.adsurl.trim() == "" || regex.test(this.adsurl) == false || this.adsname.trim() == "" || this.adsskip == 0) {
+            if (
+                this.video == null || 
+                (type != "video/mp4" && type != "video/webm") || 
+                this.adsurl.trim() == "" || 
+                regex.test(this.adsurl) == false || 
+                this.adsname.trim() == "" || 
+                this.adsskip == 0
+            ) {
                 this.$swal({
                     icon: "warning",
                     title: "Please complete the information.",

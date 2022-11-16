@@ -108,14 +108,14 @@ export default {
                 .post("api/v1/manage-update-category", formData)
                 .then(function (response) {
                     if (response.data.code == 200) {
-                        self.$swal({
-                            icon: "success",
-                            title: self.$t("Save Successful"),
-                        });
+                        // self.$swal({
+                        //     icon: "success",
+                        //     title: self.$t("Save Successful"),
+                        // });
 
-                        setTimeout(function () {
-                            self.get_category();
-                        }, 1000);
+                        // setTimeout(function () {
+                        self.get_category();
+                        // }, 1000);
                     }
                 })
                 .catch(function (error) {

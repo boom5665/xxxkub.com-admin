@@ -22,9 +22,10 @@
                 </div>
             </div>
             <div class="col-12 display-start">
-                <div class="col-6 input-group nopadding">
+                <!-- ตัวอย่างของ av -->
+                <!-- <div class="col-6 input-group nopadding">
                     <InputText :text_input_top="$t(preview_text_top)" :text_input_bottom="preview_text_bottom" :status_value="preview_status" v-model="preview"></InputText>
-                </div>
+                </div> -->
                 <div class="col-6 input-group nopadding">
                     <InputScore :text_input_top="$t(ratescore_text_top)" :text_input_bottom="ratescore_text_bottom" :status_value="ratescore_status" v-model="ratescore"></InputScore>
                 </div>
@@ -49,21 +50,26 @@ export default {
             // Data Input
             idpage: null,
             image: null,
+
+            // ชื่อหนัง
             fullname_text_top: "Full Name",
             fullname_text_bottom: "",
             fullname: "",
             fullname_status: true,
 
+            // เรื่องย่อของหนัง 
             description_text_top: "Description",
             description_text_bottom: "",
             description: "",
             description_status: true,
 
-            preview_text_top: "Preview",
-            preview_text_bottom: "",
-            preview: "",
-            preview_status: true,
+            // ตัวอย่าง youtube
+            // preview_text_top: "Preview",
+            // preview_text_bottom: "",
+            // preview: "",
+            // preview_status: true,
 
+            // คะแนน
             ratescore_text_top: "Rate Score",
             ratescore_text_bottom: "",
             ratescore: "",
@@ -76,6 +82,7 @@ export default {
             year: "",
             year_status: true,
 
+            // สถานะของหนัง
             status_text_top: "Movie Show",
             status: "",
             statusstatus: true,
@@ -104,25 +111,20 @@ export default {
                 this.description_status = true;
             }
         },
-        year(val) {
-            if (val != 0) {
-                this.preview_status = true;
-            }
-        },
-        preview(val) {
-            if (val != "") {
-                this.preview_status = true;
-            }
-        },
-        ratescore(val) {
-            if (val != 0) {
-                this.ratescore_status = true;
-            }
-        },
+        // preview(val) {
+        //     if (val != "") {
+        //         this.preview_status = true;
+        //     }
+        // },
+        // ratescore(val) {
+        //     if (val != 0) {
+        //         this.ratescore_status = true;
+        //     }
+        // },
     },
     methods: {
         save() {
-            if (this.fullname == "" || this.description == "" || (this.year == 0 || this.year == "") || this.preview == ""  || this.ratescore == 0) {
+            if (this.fullname == "" || this.description == "" ) {
                 this.error();
             } else {
                 this.SaveData();
@@ -144,11 +146,11 @@ export default {
             }
 
             // Error ปี
-            if (this.year == 0 || this.year == "" ) {
-                this.year_status = false;
-            } else {
-                this.year_status = true;
-            }
+            // if (this.year == 0 || this.year == "" ) {
+            //     this.year_status = false;
+            // } else {
+            //     this.year_status = true;
+            // }
 
             // Error คะแนน
             if (this.preview == "") {
@@ -158,14 +160,14 @@ export default {
             }
 
             // Error คะแนน
-            if (this.ratescore == "") {
-                this.ratescore_status = false;
-            } else {
-                this.ratescore_status = true;
-            }
+            // if (this.ratescore == "") {
+            //     this.ratescore_status = false;
+            // } else {
+            //     this.ratescore_status = true;
+            // }
 
 
-            if (this.fullname == "" || this.description == "" || this.year == "" || this.preview == "" || this.ratescore == "" ) {
+            if (this.fullname == "" || this.description == ""  ) {
                 this.$swal({
                     icon: "warning",
                     title: "Please complete the information.",
@@ -212,7 +214,6 @@ export default {
                     this.fullname = response.result.full_name;
                     this.description = response.result.description;
                     this.year = response.result.year.toString();
-                    this.preview = response.result.preview;
                     this.ratescore = response.result.ratescore;
                     this.status = response.result.active;
 
@@ -235,7 +236,6 @@ export default {
                 name_movie: self.fullname,
                 description: self.description,
                 year: Number(self.year),
-                example_youtube: self.preview,
                 score: Number(self.ratescore),
                 status: self.status == true ? 1 : 0,
             };

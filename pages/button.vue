@@ -1,6 +1,6 @@
 <template>
     <div id="test1" class="content-body">
-        <div style="width: 100%"> 
+        <div style="width: 100%">
             <div style="display: flex">
                 <div>
                     <label for="" class="input-label">หน้าใหม่</label>

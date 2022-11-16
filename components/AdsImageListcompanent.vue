@@ -319,14 +319,14 @@ export default {
                                     '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
                                     '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
 
-            if (name == "" || url == "" || regex.test(url) == false) {
+            if (name.trim() == "" || url.trim() == "" || regex.test(url) == false) {
                 this.error(name, url);
             } else {
-                this.FormData(id, name, status, url, picture, page, position);
+                this.FormData(id, name.trim(), status, url.trim(), picture, page, position);
             }
         },
         error(name, url) {
-            if (name == "") {
+            if (name.trim() == "") {
                 this.adsnamestatus = false;
             } else {
                 this.adsnamestatus = true;
@@ -340,13 +340,13 @@ export default {
                                     '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
                                     '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
 
-            if (url == "" || regex.test(url) == false) {
+            if (url.trim() == "" || regex.test(url) == false) {
                 this.adsurlstatus = false;
             } else {
                 this.adsurlstatus = true;
             }
 
-            if (name == "" || url == "" || regex.test(url) == false) {
+            if (name.trim() == "" || url.trim() == "" || regex.test(url) == false) {
                 this.$swal({
                     icon: "warning",
                     title: "Please complete the information.",
